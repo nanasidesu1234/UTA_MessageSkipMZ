@@ -20,6 +20,7 @@
         "outFile": "./dest/plugin/UTA_MessageSkipMZ.js"
     },
     "files": [
+        "./src/plugin/d.ts/utakata.d.ts",
         "./src/plugin/d.ts/rmmz_core.d.ts",
         "./src/plugin/d.ts/rmmz_objects.d.ts",
         "./src/plugin/d.ts/rmmz_managers.d.ts",
