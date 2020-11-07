@@ -43,35 +43,35 @@
  * This plugin make to skip message by hold down a specific key 
  * while the message is displayed.
  * It is a message skip function that is often used Text adventure game etc.
- * 
+ *
  * When a choice is inserted, the skipping is interrupted 
  * when the choice is displayed.
- * 
+ *
  * The following messages can be skipped.
  * - Show Text
  * - Show Scrolling Text
  *   - not skip if check "No fast Forward".
  * - Battle log in battle
- * 
+ *
  * # Plugin Parameters
  * ## Assgin keys
  * Key to be assigned to message skipping.
  * Multiple keys can be assigned.
- * 
+ *
  * If you assign more than one key, the message will be skipped 
  * while any one of the keys is being pressed.
- * 
+ *
  * Select one of the available keys in the dropdown list.
  * - Available keys are within the keymap defined in 
  *   the RPGMakerMZ core script.
- * 
+ *
  * Keys in parentheses are identifiers at the time of setting.
- * 
+ *
  * By default, "control" and "alt" keys are set.
- * 
+ *
  * # Plugin Commands
  * This plugin has no plugin commands.
- * 
+ *
  * # Plugin Informations
  * Version      : 0.9.0
  * Last Updated : 2020.11.07
@@ -80,7 +80,7 @@
  * GitHub       : https://github.com/t-akatsuki
  * Twitter      : https://twitter.com/T_Akatsuki
  * License      : MIT License
- * 
+ *
  * # Changelog
  * ## 0.9.0 (2020.11.07)
  * Beta version.
