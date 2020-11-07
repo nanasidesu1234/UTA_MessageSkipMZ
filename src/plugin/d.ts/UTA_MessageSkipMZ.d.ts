@@ -6,6 +6,7 @@
  */
 type MessageSkipPluginParameters = {
     assignKeyCodes: string;
+    enableLongTouchSkip: string;
     scrollMessageSpeedRate: string;
     battleLogMessageSpeed: string;
 }

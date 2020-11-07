@@ -33,6 +33,13 @@ namespace utakata {
          */
         private static _keyNameList: string[] = [];
         /**
+         * ロングタップ/マウス左ボタン長押しでのスキップを有効にするか
+         * @static
+         * @private
+         * @type {boolean}
+         */
+        private static _isEnabledLongTouchSkip: boolean = false;
+        /**
          * スクロールメッセージのスキップ時速度レート
          * @static
          * @private
@@ -68,6 +75,7 @@ namespace utakata {
             // プラグインパラメータに指定された値を読み込む
             var assignKeyCodes: string[] = JsonEx.parse(this._parameters.assignKeyCodes);
             this._loadKeyNameList(assignKeyCodes);
+            this._loadEnabledLongTouchSkip();
             this._loadScrollMessageSpeedRate();
             this._loadBattleLogMessageSpeed();
         }
@@ -94,6 +102,20 @@ namespace utakata {
             this._keyNameList = this._keyNameList.filter((x: string, i: number, self: string[]) => {
                 return self.indexOf(x) === i;
             });
+        }
+
+        /**
+         * プラグインパラメータからロングタップ/マウス左ボタン長押しでの
+         * スキップ有効状態を得る。
+         * @static
+         * @private
+         */
+        private static _loadEnabledLongTouchSkip(): void {
+            const enableLongTouchSkipStr: string = this._parameters.enableLongTouchSkip;
+            if (!["true", "false"].includes(enableLongTouchSkipStr)) {
+                throw new Error(this.PLUGIN_NAME + ": plugin parameter error: enableLongTouchSkip is invalid value. (" + enableLongTouchSkipStr + ")");
+            }
+            this._isEnabledLongTouchSkip = enableLongTouchSkipStr === "true";
         }
 
         /**
@@ -145,6 +167,12 @@ namespace utakata {
          * @return {boolean} メッセージスキップ状態である場合trueを返す。
          */
         public static isMessageSkip(): boolean {
+            // ロングタップ/マウス左ボタン長押しでのスキップが有効な場合は判定
+            if (this._isEnabledLongTouchSkip) {
+                if (TouchInput.isLongPressed()) {
+                    return true;
+                }
+            }
             return this._isPressedSkipButton();
         }
 

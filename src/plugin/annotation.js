@@ -39,6 +39,15 @@
  * @option F9 (debug)
  * @value debug
  *
+ * @param enableLongTouchSkip
+ * @text Enable long touch skip
+ * @desc Whether enable to skip message by long tap / long press of 
+ * left mouse button will also skip message.
+ * @default false
+ * @type boolean
+ * @on enabled
+ * @off disabled
+ *
  * @param scrollMessageSpeedRate
  * @text Scroll message speed rate on skip
  * @desc 
@@ -143,6 +152,15 @@
  * @value down
  * @option F9 (debug)
  * @value debug
+ *
+ * @param enableLongTouchSkip
+ * @text ロングタップ/マウス左ボタン長押しでのスキップ
+ * @desc ロングタップ/マウス左ボタン長押しでも
+ * メッセージスキップを行うかの設定です。
+ * @default false
+ * @type boolean
+ * @on 有効にする
+ * @off 有効にしない
  *
  * @param scrollMessageSpeedRate
  * @text スキップ中のスクロール文章速度
