@@ -80,7 +80,7 @@ namespace utakata {
          * @private
          * @param {string[]} targetList 読み込み対象文字列配列。
          */
-        private static _loadKeyNameList(targetList: string[]) {
+        private static _loadKeyNameList(targetList: string[]): void {
             this._keyNameList = [];
             const keyMapperNames: string[] = Object.values(Input.keyMapper);
             for (const targetStr of targetList) {
@@ -102,8 +102,8 @@ namespace utakata {
          * @private
          */
         private static _loadScrollMessageSpeedRate(): void {
-            const speedStr = this._parameters.scrollMessageSpeedRate;
-            const speed = parseInt(speedStr, 10);
+            const speedStr: string = this._parameters.scrollMessageSpeedRate;
+            const speed: number = parseInt(speedStr, 10);
             if (speed !== speed) {
                 throw new Error(this.PLUGIN_NAME + ": plugin parameter error: scrollMessageSpeedRate is invalid value. (" + speedStr + ")");
             }
@@ -116,8 +116,8 @@ namespace utakata {
          * @private
          */
         private static _loadBattleLogMessageSpeed(): void {
-            const speedStr = this._parameters.battleLogMessageSpeed;
-            const speed = parseInt(speedStr, 10);
+            const speedStr: string = this._parameters.battleLogMessageSpeed;
+            const speed: number = parseInt(speedStr, 10);
             if (speed !== speed) {
                 throw new Error(this.PLUGIN_NAME + ": plugin parameter error: battleLogMessageSpeed is invalid value. (" + speedStr + ")");
             }
