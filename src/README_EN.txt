@@ -1,21 +1,33 @@
-#=============================================================================#
-# UTA_************ Plugin                                                     #
-#=============================================================================#
-#-----------------------------------------------------------------------------#
-# Overview                                                                    #
-#-----------------------------------------------------------------------------#
+#==============================================================================
+# UTA_MessageSkipMZ Plugin
+#==============================================================================
+#------------------------------------------------------------------------------
+# Overview
+#------------------------------------------------------------------------------
+This plugin make to skip message by hold down a specific key 
+while the message is displayed.
+It is a message skip function that is often used Text adventure game etc.
 
+This plugin is not supported to work RPG Maker MV.
+It is for RPG Maker MZ only.
+Please use the following plugin if you want to use it in RPG Maker MV.
 
-#-----------------------------------------------------------------------------#
-# How to use                                                                  #
-#-----------------------------------------------------------------------------#
+* https://github.com/t-akatsuki/UTA_MessageSkipMV
 
+#------------------------------------------------------------------------------
+# How to use
+#------------------------------------------------------------------------------
+Copy "UTA_MessageSkup.js" to your project, enable the plugin.
+Specify in the plugin parameters according to your preference.
 
-#-----------------------------------------------------------------------------#
-# Changelog                                                                   #
-#-----------------------------------------------------------------------------#
-* 0.0.0 (YYYY.MM.DD)
+Please refer to the plugin's help for detailed information.
 
+#------------------------------------------------------------------------------
+# Changelog
+#------------------------------------------------------------------------------
+* 0.9.0 (2020.11.07)
+Beta version.
+Remake for RPGMakerMV based on UTA_MessageSkip plugin for RPGMakerMZ.
 
 #------------------------------------------------------------------------------
 # License
@@ -40,7 +52,7 @@ Even if any problem occurs by using these software, the author is not responsibl
 #------------------------------------------------------------------------------
 +----------+------------------------------------------------+
 | Author   | t-akatsuki                                     |
-| WebSite  | www.utakata-no-yume.net                        |
+| WebSite  | https://www.utakata-no-yume.net                |
 | GitHub   | https://github.com/t-akatsuki                  |
-| Twitter  | [@T_Akatsuki](https://twitter.com/t_akatsuki)  |
+| Twitter  | https://twitter.com/t_akatsuki                 |
 +----------+------------------------------------------------+
