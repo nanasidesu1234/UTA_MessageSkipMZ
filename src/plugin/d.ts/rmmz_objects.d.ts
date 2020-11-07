@@ -10,6 +10,18 @@ declare class Game_System {
 }
 
 /**
+ * @class Game_Message
+ * @classdesc The game object class for the state of the message window that displays text
+ * or selections, etc.
+ */
+declare class Game_Message {
+    constructor();
+
+    public scrollSpeed(): number;
+    public scrollNoFast(): boolean;
+}
+
+/**
  * @class Game_Switches
  * @clssdesc The game object class for switches.
  */

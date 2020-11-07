@@ -21,6 +21,7 @@ declare var $dataSystem: {
 };
 
 declare var $gameSystem: Game_System;
+declare var $gameMessage: Game_Message;
 declare var $gameSwitches: Game_Switches;
 declare var $gameVariables: Game_Variables;
 declare var $gameParty: Game_Party;
