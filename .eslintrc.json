@@ -39,8 +39,8 @@
          */
         // namespaceの使用を許可する
         "@typescript-eslint/no-namespace": "off",
-        // 文字列などの定義時は明示的な型注釈を付けた場合に警告とする
-        "@typescript-eslint/no-inferrable-types": "warn",
+        // 文字列などの定義時は明示的な型注釈を付けた場合に警告としないように
+        "@typescript-eslint/no-inferrable-types": "off",
         // 未使用の変数はエラーとしたいがnamespaceと相性が悪い
         // トランスパイル時にもチェックするのでそちらに委ねる
         "@typescript-eslint/no-unused-vars": "off",
