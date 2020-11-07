@@ -68,6 +68,8 @@ namespace utakata {
             // プラグインパラメータに指定された値を読み込む
             var assignKeyCodes: string[] = JsonEx.parse(this._parameters.assignKeyCodes);
             this._loadKeyNameList(assignKeyCodes);
+            this._loadScrollMessageSpeedRate();
+            this._loadBattleLogMessageSpeed();
         }
 
         /**
@@ -84,7 +86,7 @@ namespace utakata {
             for (const targetStr of targetList) {
                 // Input.keyMapperで定義されているものしか受け付けない
                 if (!keyMapperNames.includes(targetStr)) {
-                    throw new Error(this.PLUGIN_NAME + ": plugin parameter error: invalid value. (" + targetStr + ")");
+                    throw new Error(this.PLUGIN_NAME + ": plugin parameter error: assignKeyCodes is invalid value. (" + targetStr + ")");
                 }
                 this._keyNameList.push(targetStr);
             }
@@ -92,6 +94,34 @@ namespace utakata {
             this._keyNameList = this._keyNameList.filter((x: string, i: number, self: string[]) => {
                 return self.indexOf(x) === i;
             });
+        }
+
+        /**
+         * プラグインパラメータからスクロールメッセージのスキップ時速度レートを得る。
+         * @static
+         * @private
+         */
+        private static _loadScrollMessageSpeedRate(): void {
+            const speedStr = this._parameters.scrollMessageSpeedRate;
+            const speed = parseInt(speedStr, 10);
+            if (speed !== speed) {
+                throw new Error(this.PLUGIN_NAME + ": plugin parameter error: scrollMessageSpeedRate is invalid value. (" + speedStr + ")");
+            }
+            this._scrollMessageSpeedRate = speed;
+        }
+
+        /**
+         * プラグインパラメータからバトルログのスキップ時速度を得る。
+         * @static
+         * @private
+         */
+        private static _loadBattleLogMessageSpeed(): void {
+            const speedStr = this._parameters.battleLogMessageSpeed;
+            const speed = parseInt(speedStr, 10);
+            if (speed !== speed) {
+                throw new Error(this.PLUGIN_NAME + ": plugin parameter error: battleLogMessageSpeed is invalid value. (" + speedStr + ")");
+            }
+            this._battleLogMessageSpeed = speed;
         }
 
         /**

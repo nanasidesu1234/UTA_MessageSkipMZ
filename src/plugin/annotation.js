@@ -39,6 +39,24 @@
  * @option F9 (debug)
  * @value debug
  *
+ * @param scrollMessageSpeedRate
+ * @text Scroll message speed rate on skip
+ * @desc 
+ * @default 100
+ * @type number
+ * @max 9999
+ * @min 1
+ * @decimals 0
+ *
+ * @param battleLogMessageSpeed
+ * @text Battle log message speed on skip
+ * @desc 
+ * @default 1
+ * @type number
+ * @max 16
+ * @min 1
+ * @decimals 0
+ *
  * @help # Overview
  * This plugin make to skip message by hold down a specific key 
  * while the message is displayed.
@@ -73,15 +91,17 @@
  * This plugin has no plugin commands.
  * 
  * # Plugin Informations
- * Version      : 0.9.0
- * Last Updated : 2020.11.07
+ * Version      : 1.0.0
+ * Last Updated : 2020.MM.DD
  * Author       : t-akatsuki
  * Web Site     : https://www.utakata-no-yume.net
  * GitHub       : https://github.com/t-akatsuki
  * Twitter      : https://twitter.com/T_Akatsuki
  * License      : MIT License
- * 
+ *
  * # Changelog
+ * ## 1.0.0 (2020.MM.DD)
+ *
  * ## 0.9.0 (2020.11.07)
  * Beta version.
  * Remake for RPGMakerMV based on UTA_MessageSkip plugin for RPGMakerMZ.
@@ -124,6 +144,24 @@
  * @option F9 (debug)
  * @value debug
  *
+ * @param scrollMessageSpeedRate
+ * @text スキップ中のスクロール文章速度
+ * @desc メッセージスキップ中の「文章のスクロール表示」の速度です。
+ * @default 100
+ * @type number
+ * @max 9999
+ * @min 1
+ * @decimals 0
+ *
+ * @param battleLogMessageSpeed
+ * @text スキップ中のバトルログ速度
+ * @desc メッセージスキップ中の戦闘時バトルログの速度です。
+ * @default 1
+ * @type number
+ * @max 16
+ * @min 1
+ * @decimals 0
+ *
  * @help # 概要
  * メッセージ表示中に特定キーを押し続ける事で
  * メッセージの早送りを行う事ができるようになるプラグインです。
@@ -151,12 +189,26 @@
  *
  * デフォルトは「control」「alt」キーが設定されています。
  *
+ * ## スキップ中のスクロール文章速度
+ * メッセージスキップ中の「文章のスクロール表示」の速度倍数です。
+ * イベントコマンド設定時に指定したスクロール速度を基準に
+ * 設定した倍数の速度になります。
+ *
+ * デフォルト値は100(超速)に設定されています。
+ *
+ * ## スキップ中のバトルログ速度
+ * メッセージスキップ中の戦闘時バトルログの速度です。
+ * 値が小さいほど速くなります。
+ * デフォルト値は1(最速)に設定されています。
+ *
+ * ※参考までに通常時のバトルログ速度は16のようです。
+ *
  * # プラグインコマンド
  * プラグインコマンドはありません。
  *
  * # プラグインの情報
- * バージョン : 0.9.0
- * 最終更新日 : 2020.11.07
+ * バージョン : 1.0.0
+ * 最終更新日 : 2020.MM.DD
  * 制作者     : 赤月 智平(t-akatsuki)
  * Webサイト  : https://www.utakata-no-yume.net
  * GitHub    : https://github.com/t-akatsuki
@@ -164,6 +216,8 @@
  * ライセンス : MIT License
  *
  * # 更新履歴
+ * ## 1.0.0 (2020.MM.DD)
+ * 
  * ## 0.9.0 (2020.11.07)
  * β版。
  * RPGツクールMV用UTA_MessageSkipをRPGツクールMZ用に移植。

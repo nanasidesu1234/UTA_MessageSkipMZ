@@ -6,4 +6,6 @@
  */
 type MessageSkipPluginParameters = {
     assignKeyCodes: string;
+    scrollMessageSpeedRate: string;
+    battleLogMessageSpeed: string;
 }
