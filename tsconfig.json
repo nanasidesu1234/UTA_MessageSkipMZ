@@ -21,10 +21,12 @@
     },
     "files": [
         "./src/plugin/d.ts/utakata.d.ts",
+        "./src/plugin/d.ts/UTA_MessageSkipMZ.d.ts",
         "./src/plugin/d.ts/rmmz_core.d.ts",
         "./src/plugin/d.ts/rmmz_objects.d.ts",
         "./src/plugin/d.ts/rmmz_managers.d.ts",
-        "./src/plugin/d.ts/rmmz_scenes.d.ts"
+        "./src/plugin/d.ts/rmmz_scenes.d.ts",
+        "./src/plugin/d.ts/rmmz_windows.d.ts"
     ],
     "include": [
         "./src/plugin/ts/*.ts"
