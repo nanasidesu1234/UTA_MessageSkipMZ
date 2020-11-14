@@ -60,6 +60,7 @@
     "pixi.js": "5.2.4",
     "prettier": "2.1.2",
     "rimraf": "3.0.2",
-    "typescript": "4.0.5"
+    "typescript": "4.0.5",
+    "braces": ">=2.3.1"
   }
 }
